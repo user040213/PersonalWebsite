@@ -1,0 +1,78 @@
+
+.project-main{
+    height: 50vh;
+}
+
+.project-main .proj-header{
+    font-size: 2em;
+}
+
+.project-main .slider-section{
+    margin: 3vw;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.navigation{
+    background-color: #111;
+    transition: 0.4s ease-in-out;
+    padding: 3em 1em;
+    margin: 2em;
+    border-radius: 8px;
+
+}
+.btn-slide{
+    font-size: 2em;
+    transition: 0.4s ease-in-out;
+    color: var(--primary-light);
+}
+
+.navigation:hover{
+    transition: 0.4s ease-in-out;
+    background-color: var(--primary-light);
+}
+
+.navigation:hover .btn-slide{
+    transition: 0.4s ease-in-out;
+    color: #000;
+}
+
+.project-main .proj-section{
+    display: grid;
+    gap: 5vw;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-snap-type: inline mandatory;
+
+}
+
+.project-main .proj-section > *{
+    scroll-snap-align: center;
+}
+
+.project-main .proj-section:last-child{
+    scroll-snap-align: end;
+}
+
+.project-main .proj-section::before, 
+.project-main .proj-section::after{
+    content: "";
+}
+
+.project-main .proj-elem{
+    height: 80%;
+}
+
+@media screen and (max-width:840px){
+    .btn-slide{
+        display: none;
+    }
+
+    .navigation{
+        display: none;
+    }
+}

@@ -1,0 +1,117 @@
+.header {
+    position: fixed;
+    height: 90px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.5s ease-in;
+    overflow: hidden;
+    background-color: #131313;
+}
+
+.header .menu-button{
+    display: none;
+}
+
+.menu-button:hover {
+    color: var(--primary-color);
+    transition: 0.3s ease-in;
+}
+
+.menu-button{
+    color: #fff;
+    transition: 250ms linear 50ms;
+}
+
+.header .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1240px;
+    margin: auto;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.header .nav-menu-list{
+    margin-left:auto;
+    margin-right:0;
+    padding: 0 3rem;
+    display: flex;
+}
+
+.header .nav-item{
+    padding: 1rem;
+    font-weight: 500;
+    list-style-type: none;
+}
+
+.header .nav-item a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', serif;
+    font-weight: 400;
+
+}
+
+.header .nav-item a:hover{
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.header .navbar .ghlogo{
+    
+}
+
+.header .navbar .ghlogo img{
+    float: left;
+    width: 12%;
+    height: 12%;
+} 
+
+
+@media screen and (max-width:840px){
+    .header{
+        max-width: 100%;
+        background-color: #131313;
+    }
+
+    .header .navbar{
+        max-width: 100%;
+    }
+
+    .header .menu-button{
+        margin-left: auto;
+        margin-right: 0;
+        display: block;
+        font-size: 2.25em;
+    }
+
+    .nav-menu-list{
+        position: fixed;
+        left: -100%;
+        top: 90px;
+        flex-direction: column;
+        background-color: rgba(11, 11, 11, 0.6);
+        width: 100%;
+        height: 90vh;
+        z-index: 999;
+        text-align: center;
+        transition: 0.4s;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-menu-list.active{
+        left: 0;
+    }
+
+    .nav-item{
+        margin: 1.5rem 0;
+    }
+
+}
