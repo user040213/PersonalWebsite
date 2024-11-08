@@ -1,4 +1,5 @@
 ### Personal Website
+![](Home.png "Hero/Landing Page")
 ## Frameworks/Techstack
 Used MERN stack (MongoDB, Express.js, React, Node)
 Frontend code has been modified so that the backend portion is not needed for easier hosting
